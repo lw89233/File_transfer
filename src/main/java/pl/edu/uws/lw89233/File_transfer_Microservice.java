@@ -30,7 +30,7 @@ public class File_transfer_Microservice {
         }
     }
 
-    private class ClientHandler extends Thread {
+    private static class ClientHandler extends Thread {
 
         private final Socket clientSocket;
 
