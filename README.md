@@ -17,4 +17,12 @@ FILE_TRANSFER_MICROSERVICE_PORT=
 
 ## Uruchomienie
 
-Serwis można uruchomić, wykonując główną metodę `main` w klasie `File_transfer.java`
+Uruchomienie aplikacji odbywa się przy użyciu Dockera.
+
+1.  **Sklonuj repozytorium**
+2.  **Skonfiguruj zmienne środowiskowe**: Utwórz plik `.env` w głównym katalogu projektu i uzupełnij go o wymagane wartości (możesz skorzystać z `.env.sample`).
+3.  **Uruchom aplikację**: W głównym katalogu projektu wykonaj polecenie:
+    ```bash
+    docker-compose up --build
+    ```
+    Spowoduje to zbudowanie obrazu Docker i uruchomienie kontenera z aplikacją.
