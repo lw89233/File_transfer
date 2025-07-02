@@ -1,6 +1,5 @@
 package pl.edu.uws.lw89233;
 
-import pl.edu.uws.lw89233.managers.EnvManager;
 import pl.edu.uws.lw89233.managers.MessageManager;
 import java.io.BufferedReader;
 import java.io.File;
@@ -14,9 +13,9 @@ import java.net.Socket;
 import java.util.Arrays;
 import java.util.Base64;
 
-public class File_transfer_Microservice {
+public class File_transfer {
 
-    private final int PORT = Integer.parseInt(EnvManager.getEnvVariable("FILE_TRANSFER_MICROSERVICE_PORT"));
+    private final int PORT = Integer.parseInt(System.getenv("FILE_TRANSFER_MICROSERVICE_PORT"));
 
     public void startService() {
         try (ServerSocket serverSocket = new ServerSocket(PORT)) {
@@ -162,6 +161,6 @@ public class File_transfer_Microservice {
     }
 
     public static void main(String[] args) {
-        new File_transfer_Microservice().startService();
+        new File_transfer().startService();
     }
 }

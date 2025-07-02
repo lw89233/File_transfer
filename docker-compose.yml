@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  file-transfer:
+    build: .
+    image: file-transfer:latest
+    container_name: file-transfer-service
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - "${FILE_TRANSFER_MICROSERVICE_PORT}:${FILE_TRANSFER_MICROSERVICE_PORT}"
+    volumes:
+      - ./files:/app/files
