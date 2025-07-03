@@ -1,7 +1,6 @@
 services:
   file-transfer:
-    build: .
-    image: file-transfer:latest
+    image: lw89233/file-transfer:latest
     container_name: file-transfer-service
     restart: unless-stopped
     env_file:
